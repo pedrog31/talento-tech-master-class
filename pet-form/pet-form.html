@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Mascotas</title>
+    <link rel="stylesheet" href="pet-form.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tienda de Mascotas</h1>
+      <p>Todo lo que necesitas para tu mascota en un solo lugar</p>
+    </header>
+
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a class="navbar-item-link" href="../index.html">Inicio</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-item-link" href="#products">Productos</a>
+        </li>
+        <li class="navbar-item navbar-item-selected">
+          <a class="navbar-item-link" href="pet-form.html"
+            >Registra tu mascota</a
+          >
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-item-link" href="../index.html#contact">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1 class="title">Registro de Mascotas</h1>
+      <p>
+        Registra tu mascota para obtener información relevante y multiples
+        descuentos en nuestros productos.
+      </p>
+      <form id="pet-form">
+        <label class="label" for="pet-name">Nombre de la Mascota:</label>
+        <input class="form-input" type="text" id="pet-name" required />
+
+        <label class="label" for="pet-type">Tipo de Mascota:</label>
+        <select class="form-input" name="pet-type" id="pet-type">
+          <option value="perro">Perro</option>
+          <option value="gato">Gato</option>
+          <option value="conejo">Conejo</option>
+          <option value="gallina">Gallina</option>
+          <option value="vaca">Vaca</option>
+          <option value="pato">Pato</option>
+        </select>
+
+        <label class="label" for="pet-age">Edad de la Mascota:</label>
+        <input class="form-input" type="number" id="pet-age" required />
+
+        <button type="submit">Registrar Mascota</button>
+      </form>
+      <div id="message"></div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Tienda de Mascotas. Todos los derechos reservados.</p>
+    </footer>
+    <script src="pet-form.js"></script>
+  </body>
+</html>

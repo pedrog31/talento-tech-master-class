@@ -3,33 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registro de Mascotas</title>
+    <title>Tienda de Mascotas</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
+      type="text/css"
+    />
   </head>
   <body>
-    <div class="container">
-      <h1>Registro de Mascotas</h1>
-      <form id="pet-form">
-        <label for="pet-name">Nombre de la Mascota:</label>
-        <input class="form-input" type="text" id="pet-name" required />
+    <header>
+      <h1>Tienda de Mascotas</h1>
+      <p>Todo lo que necesitas para tu mascota en un solo lugar</p>
+    </header>
 
-        <label for="pet-type">Tipo de Mascota:</label>
-        <select class="form-input" name="pet-type" id="pet-type">
-          <option value="perro">Perro</option>
-          <option value="gato">Gato</option>
-          <option value="conejo">Conejo</option>
-          <option value="gallina">Gallina</option>
-          <option value="vaca">Vaca</option>
-          <option value="pato">Pato</option>
-        </select>
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item navbar-item-selected">
+          <a class="navbar-item-link" href="#about">Inicio</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-item-link" href="products/products.html">Productos</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-item-link" href="pet-form/pet-form.html"
+            >Registra tu mascota</a
+          >
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-item-link" href="#contact">Contacto</a>
+        </li>
+      </ul>
+    </nav>
 
-        <label for="pet-age">Edad de la Mascota:</label>
-        <input class="form-input" type="number" id="pet-age" required />
+    <section id="about">
+      <h2>Sobre Nosotros</h2>
+      <p>
+        Somos una tienda apasionada por el cuidado de las mascotas. Ofrecemos
+        una amplia gama de productos para satisfacer todas las necesidades de tu
+        amigo peludo.
+      </p>
+    </section>
 
-        <button type="submit">Registrar Mascota</button>
-      </form>
-      <div id="message"></div>
-    </div>
-    <script src="script.js"></script>
+    <section id="products">
+      <h2>Productos mas vendidos de la semana</h2>
+      <div class="product-container">
+        <div class="product" onclick="showDetails('Alimento para perros')">
+          <h3>Alimento para perros</h3>
+          <img
+            class="product-image"
+            src="assets/alimento-perro.avif"
+            alt="Alimento para perros"
+          />
+          <p>Alimento de alta calidad para perros de todas las razas.</p>
+        </div>
+        <div class="product" onclick="showDetails('Juguetes para gatos')">
+          <h3>Juguetes para gatos</h3>
+          <img
+            class="product-image"
+            src="assets/juguete-gato.jpg"
+            alt="Juguetes para gatos"
+          />
+          <p>Variedad de juguetes divertidos para mantener activo a tu gato.</p>
+        </div>
+        <div class="product" onclick="showDetails('Juguetes para gatos')">
+          <h3>Deslanador para perros peludos</h3>
+          <img
+            class="product-image"
+            src="assets/deslanador.avif"
+            alt="Deslanador para perros peludos"
+          />
+          <p>Elimina el pelo muerto y da mas brillo a su pelaje.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contacto</h2>
+      <p>Dirección: Calle de las Mascotas, Ciudad Petlandia</p>
+      <p>Teléfono: +123 456 7890</p>
+      <p>Email: contacto@tiendademascotas.com</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Tienda de Mascotas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
   </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Mascotas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registro de Mascotas</h1>
+      <form id="pet-form">
+        <label for="pet-name">Nombre de la Mascota:</label>
+        <input class="form-input" type="text" id="pet-name" required />
+
+        <label for="pet-type">Tipo de Mascota:</label>
+        <select class="form-input" name="pet-type" id="pet-type">
+          <option value="perro">Perro</option>
+          <option value="gato">Gato</option>
+          <option value="conejo">Conejo</option>
+          <option value="gallina">Gallina</option>
+          <option value="vaca">Vaca</option>
+          <option value="pato">Pato</option>
+        </select>
+
+        <label for="pet-age">Edad de la Mascota:</label>
+        <input class="form-input" type="number" id="pet-age" required />
+
+        <button type="submit">Registrar Mascota</button>
+      </form>
+      <div id="message"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
